@@ -10,7 +10,7 @@
 require "../src/discordcr"
 
 # Make sure to replace this fake data with actual data when running.
-client = Discord::Client.new(token: "Bot MjI5NDU5NjgxOTU1NjUyMzM3.Cpnz31.GQ7K9xwZtvC40y8MPY3eTqjEIXm", client_id: 229459681955652337_u64)
+client = Discord::Client.new(token: "Bot MzY1ODYyNDE3Mjc3NjQ4ODk3.DLkoiQ.2VbIxsvE7SbGaTQ0_GOahHC9um4", client_id: 365862417277648897_u64)
 
 # Command Prefix
 PREFIX = "!"
@@ -21,7 +21,7 @@ client.on_message_create do |payload|
   when PREFIX + "help"
     client.create_message(client.create_dm(payload.author.id).id, "Help is on the way!")
   when PREFIX + "about"
-    block = "```\nBot developed by discordcr\n```"
+    block = "```\nBot developed by CardinalVAL\n```"
     client.create_message(payload.channel_id, block)
   when .starts_with? PREFIX + "echo"
     # !echo is a good example of a command with arguments (suffix)
